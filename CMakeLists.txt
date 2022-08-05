@@ -21,12 +21,12 @@ if(IMPLOT_DEMO)
   list(APPEND IMPLOT_SOURCES "implot_demo.cpp")
 endif()
 
-add_library(implot IMPLOT_INTERFACE)
-target_sources(implot IMPLOT_INTERFACE
+add_library(implot INTERFACE)
+target_sources(implot INTERFACE
   ${IMPLOT_SOURCES}
   ${IMPLOT_HEADERS}
 )
-target_include_directories(implot IMPLOT_INTERFACE "${CMAKE_CURRENT_LIST_DIR}")
+target_include_directories(implot INTERFACE "${CMAKE_CURRENT_LIST_DIR}")
 
 if(IMPLOT_BACKEND_OPENGL3 AND (NOT CMAKE_SYSTEM_NAME STREQUAL Emscripten))
   add_subdirectory(examples/libs/gl3w)
