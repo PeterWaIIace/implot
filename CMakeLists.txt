@@ -8,13 +8,13 @@ project(implot
 option(IMPLOT_DEMO "Build implot_demo.cpp" ON)
 
 set(IMPLOT_HEADERS
-  "${CMAKE_CURRENT_LIST_DIR}/implot.h"
-  "${CMAKE_CURRENT_LIST_DIR}/implot_internal.h"
+  "implot.h"
+  "implot_internal.h"
 )
 
 set(IMPLOT_SOURCES
-  "${CMAKE_CURRENT_LIST_DIR}/implot.cpp"
-  "${CMAKE_CURRENT_LIST_DIR}/implot_items.cpp"
+  "implot.cpp"
+  "implot_items.cpp"
 )
 
 if(IMPLOT_DEMO)
